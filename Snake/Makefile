@@ -8,7 +8,9 @@ ARDUINO_PORT = /dev/ttyUSB0
 BOARD_TAG = uno
 
 USER_LIB_PATH = $(realpath .)/lib
-ARDUINO_LIBS += matrix_driver
+ARDUINO_LIBS += matrix_driver\
+		display_api
+
 ARDUINO_SKETCH_BOOK = ${USER_LIB_PATH}
 
 #Includes Arduino make file for building and flashing the scketch

@@ -8,7 +8,7 @@ typedef enum{
 	matrix_cell_2,
 	matrix_cell_3,
 	matrix_cell_4,
-	matrix_cel1_5,
+	matrix_cell_5,
         matrix_cell_6,
         matrix_cell_7,
         matrix_cell_8,

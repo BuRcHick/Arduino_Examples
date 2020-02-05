@@ -1,27 +1,131 @@
 #include<stdint.h>
 #include<stdlib.h>
 #include"matrix_driver.h"
-
+#include"display_api.h"
 void setup(){ 
 	drv_matrix_init();
 	Serial.begin(115200);
 }
 
+static matrix_cells_t s_arrow_up[] = {	matrix_cell_4, 
+					matrix_cell_5,
+					matrix_cell_11,
+					matrix_cell_12,
+					matrix_cell_13,
+					matrix_cell_14,
+					matrix_cell_18, 
+					matrix_cell_19,
+					matrix_cell_20,
+					matrix_cell_21,
+					matrix_cell_22,
+					matrix_cell_23,
+					matrix_cell_25, 
+					matrix_cell_26,
+					matrix_cell_27,
+					matrix_cell_28,
+					matrix_cell_29,
+					matrix_cell_30,
+					matrix_cell_31, 
+					matrix_cell_32,
+					matrix_cell_36,
+					matrix_cell_37,
+					matrix_cell_44,
+					matrix_cell_45,
+					matrix_cell_52, 
+					matrix_cell_53,
+					matrix_cell_60,
+					matrix_cell_61};
+
+static matrix_cells_t s_arrow_down[] = {matrix_cell_4, 
+					matrix_cell_5,
+					matrix_cell_12,
+					matrix_cell_13,
+					matrix_cell_20,
+					matrix_cell_21,
+					matrix_cell_28,
+					matrix_cell_29,
+					matrix_cell_33,
+					matrix_cell_34, 
+					matrix_cell_35,
+					matrix_cell_36,
+					matrix_cell_37,
+					matrix_cell_38,
+					matrix_cell_39,
+					matrix_cell_40, 
+					matrix_cell_42,
+					matrix_cell_43,
+					matrix_cell_44, 
+					matrix_cell_45,
+					matrix_cell_46,
+					matrix_cell_47,
+					matrix_cell_51,
+					matrix_cell_52,
+					matrix_cell_53,
+					matrix_cell_54,
+					matrix_cell_60,
+					matrix_cell_61};
+
+static matrix_cells_t s_arrow_left[] = {matrix_cell_4, 
+					matrix_cell_11,
+					matrix_cell_12,
+					matrix_cell_18, 
+					matrix_cell_19,
+					matrix_cell_20,
+					matrix_cell_25, 
+					matrix_cell_26,
+					matrix_cell_27,
+					matrix_cell_28,
+					matrix_cell_29,
+					matrix_cell_30,
+					matrix_cell_31, 
+					matrix_cell_32,
+					matrix_cell_33,
+					matrix_cell_34,
+					matrix_cell_35,
+					matrix_cell_36,
+					matrix_cell_37, 
+					matrix_cell_38,
+					matrix_cell_39,
+					matrix_cell_40, 
+					matrix_cell_42,
+					matrix_cell_43,
+					matrix_cell_44,
+					matrix_cell_51,
+					matrix_cell_52,
+					matrix_cell_60};
+
+static matrix_cells_t s_arrow_right[] ={matrix_cell_5, 
+					matrix_cell_13,
+					matrix_cell_14,
+					matrix_cell_21,
+					matrix_cell_22,
+					matrix_cell_23,
+					matrix_cell_25, 
+					matrix_cell_26,
+					matrix_cell_27,
+					matrix_cell_28,
+					matrix_cell_29,
+					matrix_cell_30,
+					matrix_cell_31, 
+					matrix_cell_32,
+					matrix_cell_33,
+					matrix_cell_34,
+					matrix_cell_35,
+					matrix_cell_36,
+					matrix_cell_37, 
+					matrix_cell_38,
+					matrix_cell_39,
+					matrix_cell_40,
+					matrix_cell_45,
+					matrix_cell_46,
+					matrix_cell_47, 
+					matrix_cell_53,
+					matrix_cell_54,
+					matrix_cell_61};
+
 void loop(){
-	drv_matrix_drawCell(matrix_cell_1);
-	drv_matrix_releseCell(matrix_cell_1);
-	drv_matrix_drawCell(matrix_cell_10);
-        drv_matrix_releseCell(matrix_cell_10);
-	drv_matrix_drawCell(matrix_cell_19);
-        drv_matrix_releseCell(matrix_cell_19);
-	drv_matrix_drawCell(matrix_cell_28);
-        drv_matrix_releseCell(matrix_cell_28);
-	drv_matrix_drawCell(matrix_cell_37);
-        drv_matrix_releseCell(matrix_cell_37);
-	drv_matrix_drawCell(matrix_cell_46);
-        drv_matrix_releseCell(matrix_cell_46);
-	drv_matrix_drawCell(matrix_cell_55);
-        drv_matrix_releseCell(matrix_cell_55);
-	drv_matrix_drawCell(matrix_cell_64);
-        drv_matrix_releseCell(matrix_cell_64);
+	for(uint8_t i = 0; i < 100; ++i) display_draw(s_arrow_up, sizeof(s_arrow_up)/sizeof(s_arrow_up[0]));
+	for(uint8_t i = 0; i < 100; ++i) display_draw(s_arrow_down, sizeof(s_arrow_down)/sizeof(s_arrow_down[0]));
+	for(uint8_t i = 0; i < 100; ++i) display_draw(s_arrow_left, sizeof(s_arrow_left)/sizeof(s_arrow_left[0]));
+	for(uint8_t i = 0; i < 100; ++i) display_draw(s_arrow_right, sizeof(s_arrow_right)/sizeof(s_arrow_right[0]));
 }
