@@ -1,0 +1,78 @@
+#ifndef _MARIX_DISPLAY_API_H_
+#define _MARIX_DISPLAY_API_H_
+#include "stdint.h"
+#include "../common.h"
+
+typedef enum{
+	matrix_cell_1,
+	matrix_cell_2,
+	matrix_cell_3,
+	matrix_cell_4,
+	matrix_cel1_5,
+        matrix_cell_6,
+        matrix_cell_7,
+        matrix_cell_8,
+	matrix_cell_9,
+        matrix_cell_10,
+        matrix_cell_11,
+        matrix_cell_12,
+	matrix_cell_13,
+        matrix_cell_14,
+        matrix_cell_15,
+        matrix_cell_16,
+	matrix_cell_17,
+        matrix_cell_18,
+        matrix_cell_19,
+        matrix_cell_20,
+	matrix_cell_21,
+        matrix_cell_22,
+        matrix_cell_23,
+        matrix_cell_24,
+	matrix_cell_25,
+        matrix_cell_26,
+        matrix_cell_27,
+        matrix_cell_28,
+	matrix_cell_29,
+        matrix_cell_30,
+        matrix_cell_31,
+        matrix_cell_32,
+	matrix_cell_33,
+        matrix_cell_34,
+        matrix_cell_35,
+        matrix_cell_36,
+	matrix_cell_37,
+        matrix_cell_38,
+        matrix_cell_39,
+        matrix_cell_40,
+	matrix_cell_41,
+        matrix_cell_42,
+        matrix_cell_43,
+        matrix_cell_44,
+	matrix_cell_45,
+        matrix_cell_46,
+        matrix_cell_47,
+        matrix_cell_48,
+        matrix_cell_49,
+        matrix_cell_50,
+        matrix_cell_51,
+        matrix_cell_52,
+        matrix_cell_53,
+        matrix_cell_54,
+        matrix_cell_55,
+        matrix_cell_56,
+        matrix_cell_57,
+        matrix_cell_58,
+        matrix_cell_59,
+        matrix_cell_60,
+        matrix_cell_61,
+        matrix_cell_62,
+        matrix_cell_63,
+        matrix_cell_64,
+	matrix_size
+}matrix_cells_t;
+
+const drv_err_t drv_matrix_isEmptyCell(const matrix_cells_t, bool*);
+const drv_err_t drv_matrix_drawCell(const matrix_cells_t);
+const drv_err_t drv_matrix_releseCell(const matrix_cells_t);
+const drv_err_t drv_matrix_init();
+#endif //_MARIX_DISPLAY_API_H_
