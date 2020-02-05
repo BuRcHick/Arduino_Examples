@@ -126,8 +126,6 @@ const drv_err_t drv_matrix_drawCell(const matrix_cells_t cell){
 	bool is_empty = false;
 	CHECK_ERR(drv_matrix_isEmptyCell(cell, &is_empty) != DRV_OK);
 	CHECK_ERR(!is_empty);
-	Serial.println(s_matrix[cell].lowStatePin);
-	Serial.println(s_matrix[cell].hightStatePin);;
 	digitalWrite(s_matrix[cell].lowStatePin, LOW);
 	digitalWrite(s_matrix[cell].hightStatePin, HIGH);
 	return DRV_OK;

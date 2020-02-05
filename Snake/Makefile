@@ -9,9 +9,10 @@ BOARD_TAG = uno
 
 USER_LIB_PATH = $(realpath .)/lib
 ARDUINO_LIBS += matrix_driver\
-		display_api
+		display_api\
+		ArduinoThread
 
-ARDUINO_SKETCH_BOOK = ${USER_LIB_PATH}
+ARDUINO_SKETCH_BOOK += ${USER_LIB_PATH}
 
 #Includes Arduino make file for building and flashing the scketch
 include ${ARDUINO_DIR}/Arduino.mk
